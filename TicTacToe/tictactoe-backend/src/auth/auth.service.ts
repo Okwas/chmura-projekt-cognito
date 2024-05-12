@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import * as AWS from 'aws-sdk';
 
 AWS.config.update({
-  region: 'eu-west-1',
+  region: 'us-east-1',
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
 });
 

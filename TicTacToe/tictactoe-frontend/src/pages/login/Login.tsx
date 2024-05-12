@@ -60,7 +60,7 @@ export default function Login() {
   return (
     <div>
       <div>
-        <p>Login </p>
+        <p>Login Form</p>
         <input
           type="email"
           placeholder="email"
@@ -75,7 +75,7 @@ export default function Login() {
         />
         <button onClick={() => onLoginClick()}>Login</button>
         <p>{error}</p>
-        <button onClick={() => setStage("register")}>Go to register</button>
+        <button onClick={() => setStage("register")}>Register account</button>
       </div>
       <div className="flex flex-col gap-4">
         <button
@@ -86,7 +86,7 @@ export default function Login() {
         >
           Play
         </button>
-        {joinGameLoading && <div>Loading...</div>}
+        {joinGameLoading && <div>Loading... Please wait</div>}
       </div>
     </div>
   )
