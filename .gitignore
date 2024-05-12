@@ -1,0 +1,59 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build output
+dist/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.bak
+*.cache
+*.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Testing
+/coverage
+
+# Build artifacts
+/build
+
+# Ignore Vite cache
+.vite/
+
+# Ignore Express generated files
+/public/
+
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfplan
+*.tfstate.*
+.terraform.lock.hcl
+
+# Ignore provider plugin binaries
+**/terraform.d/plugins/
