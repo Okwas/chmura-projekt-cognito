@@ -52,9 +52,14 @@ export class GameGateway
 
   @SubscribeMessage(JOIN_GAME)
   handleJoinGame(
-    @MessageBody() data: JoinDto,
+    // @MessageBody() data: JoinDto,
     @ConnectedSocket() client: Socket,
   ): void {
+
+    const data = {
+      username: client.handshake.auth.userId as string
+    }
+
     this.gameService.join(
       {
         ...data,
