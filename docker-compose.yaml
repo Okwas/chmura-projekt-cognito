@@ -12,7 +12,9 @@ services:
       - "5432:5432"
 
   tictactoe-backend:
-    image: 266885/ttt-back:latest
+    build:
+      context: ./TicTacToe/
+      dockerfile: Backend.Dockerfile
     environment:
       DATABASE_URL: postgresql://postgres:postgres@postgres-cloud:5432/tictactoe?schema=public
     ports:
@@ -22,7 +24,9 @@ services:
       - postgres-cloud
 
   tictactoe-frontend:
-    image: 266885/ttt-front:latest
+    build:
+      context: ./TicTacToe/
+      dockerfile: Frontend.Dockerfile
     environment:
       VITE_SOCKET_SERVER_URL: /api/
     ports:
